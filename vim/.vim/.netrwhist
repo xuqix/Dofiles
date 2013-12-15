@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/xiaok/personal_data/python/plane_game/data/music'
+let g:netrw_dirhist_2='/etc/cron.hourly'
+let g:netrw_dirhist_3='/home/xiaok/.vimnew'
+let g:netrw_dirhist_4='/usr/share/icons'
+let g:netrw_dirhist_5='/home/xiaok/personal_data/python/twisted-intro/blocking-server'
+let g:netrw_dirhist_6='/home/xiaok/personal_data/python/twisted-intro/twisted-server-2'
+let g:netrw_dirhist_7='/home/xiaok/personal_data/python/twisted-intro/twisted-server-1'
+let g:netrw_dirhist_8='/home/xiaok/test'
+let g:netrw_dirhist_9='/home/xiaok/.bpython'
