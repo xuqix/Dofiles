@@ -487,6 +487,10 @@ elseif expand("%:e") == "cpp"
     set tags+=~/.vim/cpp_tags
 endif
 
+"由于这个插件在编辑.py文件时有问题所以添加如下加载条件
+if expand("%:e") != "py"
+    source ~/.vim/snipMate.vim
+endif
 
 "pydiction 1.2 python auto complete
 "filetype plugin on
