@@ -1,5 +1,6 @@
 #!/bin/bash
-#2013-12-14 21:30
+#create date:2013-12-14 21:30
+#last change:2014-01-24 18:52
 
 #add new config file to this dir
 
@@ -46,7 +47,8 @@ fi
 
 mv -i $1 $conf_dir/$app_dir/$file_name
 ln -sf $conf_dir/$app_dir/$file_name $1
-cmd="create_symlink $conf_dir/$app_dir/$file_name $1 backup"
+#cmd="create_symlink $conf_dir/$app_dir/$file_name $1 backup"
+cmd="create_symlink $app_dir/$file_name $1 backup"
 echo "auto write \"$cmd\" to create_symlink.sh"
 echo $cmd >> create_symlink.sh
 echo "add new app success!"

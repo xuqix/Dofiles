@@ -51,4 +51,4 @@ create_symlink bpython/.bpython ~/.bpython backup
 create_symlink bash/.bashrc ~/.bashrc backup
 
 #auto write from add_app.sh
-create_symlink /home/xiaok/Dofiles/tweak/.tweakrc /home/xiaok/.tweakrc backup
+create_symlink tweak/.tweakrc /home/xiaok/.tweakrc backup
