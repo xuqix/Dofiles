@@ -113,16 +113,16 @@ alias gvim='gvim -f'
 #alias gdb='gdb -x ~/.gdbinit'
 
 
-export PATH=$PATH:/opt/EmbedSky/4.3.3/bin:/home/xiaok/Emsd1302/shell
+#export PATH=$PATH:/opt/EmbedSky/4.3.3/bin:/home/xiaok/Emsd1302/shell
 umask  022
 
 #go out wall(use autoproxy and goagent)
-alias  WALL='python /home/xiaok/personal_data/python/google_appengine/goagent/local/proxy.py'
+#alias  WALL='python /home/xiaok/personal_data/python/google_appengine/goagent/local/proxy.py'
 
 alias cls='clear'
-alias monitor='gnome-system-monitor'
-alias syslog='gnome-system-log'
-alias autostart='gnome-session-properties'
+#alias monitor='gnome-system-monitor'
+#alias syslog='gnome-system-log'
+#alias autostart='gnome-session-properties'
 
 #change resouce limit
 #ulimit -c unlimited
@@ -131,7 +131,7 @@ alias autostart='gnome-session-properties'
 export LC_CTYPE="en_US.UTF-8"
 
 #set shell prompt
-export PS1="xiaok:\w\$ "
+export PS1="\u:\w\$ "
 
 #set root dir path for cocos2dx
 export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
