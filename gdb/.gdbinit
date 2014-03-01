@@ -75,9 +75,9 @@ end
 define argv
     show args
 end
-document argv
-    Print program arguments
-end
+#document argv
+#    Print program arguments
+#end
 
 define sdis
     display /$arg0i $pc
