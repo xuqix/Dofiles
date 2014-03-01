@@ -134,5 +134,11 @@ export LC_CTYPE="en_US.UTF-8"
 export PS1="\u:\w\$ "
 
 #set root dir path for cocos2dx
-export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
+export COCOS_ROOT=/Users/apple/cocos2d-x-2.2.2
+export PATH=$PATH:$(cd ~;pwd)/tools:/opt/local/libexec/gnubin
+
+alias cgdb='cgdb -d gdb-apple'
+alias ctags='/opt/local/bin/ctags'
+alias gvim='mvim'
+alias bpython='bpython-2.7'
 
