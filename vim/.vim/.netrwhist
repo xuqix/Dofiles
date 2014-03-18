@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/gdb'
-let g:netrw_dirhist_2='/Users/apple/Library/Developer/Xcode/DerivedData/Test-btbzdpsghlqglgeakqhbbcynuujr/Build/Intermediates/Test.build'
-let g:netrw_dirhist_3='/Users/apple/personal_data/MutouCocos2dxAllDemos/Chapter7_1_RunRunRun01/proj.mac/Test.xcodeproj'
-let g:netrw_dirhist_4='/Users/apple/Documents/cocos2d-x-3.0beta2/tools/project-creator/config-create'
-let g:netrw_dirhist_5='/Users/apple/cocos2d-x-2.2.2/projects/Test/proj.ios/Test.xcodeproj/project.xcworkspace/xcuserdata/apple.xcuserdatad'
-let g:netrw_dirhist_6='/Users/apple/temp/c.dSYM'
-let g:netrw_dirhist_7='/Users/apple/Documents/cocos2d-x-3.0beta2/tools/project-creator/projects/Flappy2_ios最新/Resources'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/apple/cocos2d-x-3.0rc0'
