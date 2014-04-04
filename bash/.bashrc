@@ -118,6 +118,7 @@ umask  022
 
 #go out wall(use autoproxy and goagent)
 alias  WALL='python /home/xiaok/personal_data/python/google_appengine/goagent/local/proxy.py'
+#alias  WALL='sudo python /home/xiaok/personal_data/python/goagent-goagent-c87f498/local/proxy.py'
 
 alias cls='clear'
 alias monitor='gnome-system-monitor'
@@ -136,3 +137,7 @@ export PS1="xiaok:\w\$ "
 #set root dir path for cocos2dx
 export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
 
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.0/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
