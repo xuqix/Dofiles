@@ -585,9 +585,6 @@ map <F3>f :Dox<Enter>
 map <F3>b :DoxBlock<Enter>
 map <F3>c O/*  */<Left><Left><Left>
 
-"映射tt为复制一行(不包括换行符)
-nmap    tt  y$
-
 
 "config for vundle
 set nocompatible              " be iMproved
@@ -604,14 +601,17 @@ Bundle 'gmarik/vundle'
 "
 " original repos on GitHub
 "Bundle 'tpope/vim-rails.git'
-Bundle 'Rykka/colorv.vim.git'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle "davidhalter/jedi"
+Plugin 'Rykka/colorv.vim.git'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'davidhalter/jedi'
 
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-"Bundle 'Yggdroot/indentLine'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xuqix/h2cppx'
+Plugin 'Yggdroot/indentLine'
 " vim-scripts repos
 "Bundle 'FuzzyFinder'
 " non-GitHub repos
@@ -633,9 +633,9 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle commands are not allowed.
 
 
-"let g:indentLine_color_term = 239
-"let g:indentLine_color_gui = '#A4E57E'
-"let g:indentLine_char = '┆' "┊' '┆'
+let g:indentLine_color_term = 6 "239
+let g:indentLine_color_gui = '#A4E57E'
+"let g:indentLine_char = '┆'   " '┆' '┊' '┆'
 
 set tags+=~/.vim/cocos_tags
 
@@ -648,7 +648,7 @@ let g:ycm_warning_symbol = '⚠' "'>*'
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nmap <F4> :YcmDiags<CR>
+nmap <F5> :YcmDiags<CR>
 "let g:syntastic_ignore_files=[".*\.py$"] "禁用py文件的语法检查
 "let g:ycm_min_num_of_chars_for_completion=3
 
@@ -660,3 +660,11 @@ let g:syntastic_warning_symbol = '⚠'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:h2cppx_postfix = '.cpp'
+let g:h2cppx_template= 'template4'
+
+"一些方便使用的快捷映射
+"映射tt为复制一行(不包括换行符)
+nmap    tt  y$
+

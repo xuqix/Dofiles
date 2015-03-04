@@ -34,7 +34,7 @@ import ycm_core
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
-COCOS2D_ROOT = '/home/xiaok/extend/game_develop/cocos2d-x-3.0rc0/'
+COCOS2D_ROOT = '/home/xiaok/extend/game_develop/cocos2d-x-3.2/'
 flags = [
 '-Wall',
 '-Wextra',
@@ -95,10 +95,11 @@ flags = [
 '-isystem',
 '/usr/include/c++/4.8/',
 
+'-DLINUX',
 '-isystem',
 '/usr/local/include/GLFW',
   '-isystem',
-  COCOS2D_ROOT,
+COCOS2D_ROOT,
   '-isystem',
 COCOS2D_ROOT+'cocos',
   '-isystem',
