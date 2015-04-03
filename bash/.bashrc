@@ -84,7 +84,7 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -CF -G'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -113,16 +113,17 @@ alias gvim='gvim -f'
 #alias gdb='gdb -x ~/.gdbinit'
 
 
-#export PATH=$PATH:/opt/EmbedSky/4.3.3/bin:/home/xiaok/Emsd1302/shell
+export PATH=$PATH:/opt/EmbedSky/4.3.3/bin:/home/xiaok/Emsd1302/shell
 umask  022
 
 #go out wall(use autoproxy and goagent)
-#alias  WALL='python /home/xiaok/personal_data/python/google_appengine/goagent/local/proxy.py'
+alias  WALL='python /home/xiaok/personal_data/python/google_appengine/goagent/local/proxy.py'
+#alias  WALL='sudo python /home/xiaok/personal_data/python/goagent-goagent-c87f498/local/proxy.py'
 
 alias cls='clear'
-#alias monitor='gnome-system-monitor'
-#alias syslog='gnome-system-log'
-#alias autostart='gnome-session-properties'
+alias monitor='gnome-system-monitor'
+alias syslog='gnome-system-log'
+alias autostart='gnome-session-properties'
 
 #change resouce limit
 #ulimit -c unlimited
@@ -131,15 +132,12 @@ alias cls='clear'
 export LC_CTYPE="en_US.UTF-8"
 
 #set shell prompt
-export PS1="\u:\w\$ "
+export PS1="xiaok:\w\$ "
 
 #set root dir path for cocos2dx
-export COCOS_ROOT=/Users/apple/cocos2d-x-2.2.2
-export PATH=$PATH:$(cd ~;pwd)/tools:/opt/local/libexec/gnubin
+export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
 
-alias cgdb='cgdb -d gdb-apple'
-alias ctags='/opt/local/bin/ctags'
-alias gvim='mvim'
-alias bpython='bpython-2.7'
 
-alias dssh='sudo /usr/sbin/sshd -f /etc/sshd_config'
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
