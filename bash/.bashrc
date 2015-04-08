@@ -141,3 +141,5 @@ export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+#export LUA_PATH=/home/xiaok/extend/work/dco/src/?.lua:$LUA_PATH

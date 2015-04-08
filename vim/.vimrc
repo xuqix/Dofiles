@@ -404,7 +404,7 @@ set completeopt=menu                        "关闭预览窗口
 ":A     ---切换头文件并独占整个窗口
 ":AV    ---切换头文件并垂直分割窗口
 ":AS    ---切换头文件并水平分割窗口
-nnoremap <silent> <F4> :A<CR>
+nnoremap <silent> <F5> :A<CR>
 
 "------------------------------------------------------------------------------
 "  < txtbrowser 插件配置 >
@@ -590,12 +590,12 @@ map <F3>c O/*  */<Left><Left><Left>
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
@@ -612,6 +612,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuqix/h2cppx'
 Plugin 'Yggdroot/indentLine'
+
 " vim-scripts repos
 "Bundle 'FuzzyFinder'
 " non-GitHub repos
@@ -619,7 +620,11 @@ Plugin 'Yggdroot/indentLine'
 " Git repos on your local machine (i.e. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin'
+"Plugin 'WolfgangMehner/lua-support'
 
+call vundle#end()
 
 filetype plugin indent on     " required!
 "
@@ -667,4 +672,13 @@ let g:h2cppx_template= 'template4'
 "一些方便使用的快捷映射
 "映射tt为复制一行(不包括换行符)
 nmap    tt  y$
+
+"for vim-lua-ftplugin
+let g:lua_compiler_name='/usr/bin/luac'
+let g:lua_complete_omni=1
+"let g:lua_internal=0
+"let g:lua_check_syntax=0
+"let g:lua_check_globals=0
+
+map <F4> :NERDTreeToggle<Enter>
 
