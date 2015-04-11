@@ -124,6 +124,7 @@ alias cls='clear'
 alias monitor='gnome-system-monitor'
 alias syslog='gnome-system-log'
 alias autostart='gnome-session-properties'
+alias bpython='bpython-2.7'
 
 #change resouce limit
 #ulimit -c unlimited
@@ -135,9 +136,14 @@ export LC_CTYPE="en_US.UTF-8"
 export PS1="xiaok:\w\$ "
 
 #set root dir path for cocos2dx
-export COCOS_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-2.2.2
-
+export COCOS_ROOT=/Users/xiaok/Documents/cocos2d-x-3.3rc0
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+# export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/cocos2d-console/bin
+# export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# for lua
+#export PATH=/opt/local/bin:$PATH
+export PATH=/Users/xiaok/software/lua/bin:$PATH
+#export LUA_PATH=/Users/xiaok/work/dco/src:$LUA_PATH
+

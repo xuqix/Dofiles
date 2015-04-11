@@ -87,8 +87,8 @@ map <silent> <c-F11> :if &guioptions =~# 'm' <Bar>
 "  < 编写文件时的配置 >
 "------------------------------------------------------------------------------
 set expandtab                                         "将tab键转换为空格
-set tabstop=4                                         "设置tab键的宽度
-set shiftwidth=4                                      "换行时自动缩进4个空格
+set tabstop=3                                         "设置tab键的宽度
+set shiftwidth=3                                      "换行时自动缩进4个空格
 set backspace=2                                       "设置退格键可用
 set smarttab                                          "指定按一次backspace就删除4个空格
 "set foldenable                                        "启用折叠
@@ -404,7 +404,7 @@ set completeopt=menu                        "关闭预览窗口
 ":A     ---切换头文件并独占整个窗口
 ":AV    ---切换头文件并垂直分割窗口
 ":AS    ---切换头文件并水平分割窗口
-nnoremap <silent> <F4> :A<CR>
+nnoremap <silent> <F5> :A<CR>
 
 "------------------------------------------------------------------------------
 "  < txtbrowser 插件配置 >
@@ -436,7 +436,7 @@ au BufEnter *.txt setlocal ft=txt
 "常规模式下按"\"键加"t"键，这里不是同时按，而是先按"\"键后按"t"键，间隔在一钞内
 
 
-"colorscheme desert 
+colorscheme desert 
 "set guifont=Courier_New:h10:cANSI
 set guifont=Courier\ 10\ Pitch\ 12
 "colorscheme blue
@@ -590,12 +590,12 @@ map <F3>c O/*  */<Left><Left><Left>
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
@@ -612,6 +612,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuqix/h2cppx'
 Plugin 'Yggdroot/indentLine'
+
 " vim-scripts repos
 "Bundle 'FuzzyFinder'
 " non-GitHub repos
@@ -619,6 +620,18 @@ Plugin 'Yggdroot/indentLine'
 " Git repos on your local machine (i.e. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
+
+"for lua
+"Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-lua-ftplugin'
+"for vim-lua-ftplugin
+"let g:lua_compiler_name='/opt/local/bin/luac'
+"let g:lua_complete_omni=1
+"let g:lua_internal=0
+"let g:lua_check_syntax=0
+"let g:lua_check_globals=0
+
+"Plugin 'WolfgangMehner/lua-support'
 
 call vundle#end()
 
@@ -641,7 +654,8 @@ let g:indentLine_color_gui = '#A4E57E'
 set tags+=~/.vim/cocos_tags
 
 "YCM config!!!
-let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_global_ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_error_symbol = '✗' "'>>'
 let g:ycm_warning_symbol = '⚠' "'>*'
@@ -649,7 +663,7 @@ let g:ycm_warning_symbol = '⚠' "'>*'
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nmap <F5> :YcmDiags<CR>
+nmap <F6> :YcmDiags<CR>
 "let g:syntastic_ignore_files=[".*\.py$"] "禁用py文件的语法检查
 "let g:ycm_min_num_of_chars_for_completion=3
 
@@ -668,4 +682,7 @@ let g:h2cppx_template= 'template4'
 "一些方便使用的快捷映射
 "映射tt为复制一行(不包括换行符)
 nmap    tt  y$
+
+
+map <F4> :NERDTreeToggle<Enter>
 
