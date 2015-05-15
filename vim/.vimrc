@@ -87,8 +87,8 @@ map <silent> <c-F11> :if &guioptions =~# 'm' <Bar>
 "  < 编写文件时的配置 >
 "------------------------------------------------------------------------------
 set expandtab                                         "将tab键转换为空格
-set tabstop=3                                         "设置tab键的宽度
-set shiftwidth=3                                      "换行时自动缩进4个空格
+set tabstop=4                                         "设置tab键的宽度
+set shiftwidth=4                                      "换行时自动缩进4个空格
 set backspace=2                                       "设置退格键可用
 set smarttab                                          "指定按一次backspace就删除4个空格
 "set foldenable                                        "启用折叠
@@ -685,4 +685,9 @@ nmap    tt  y$
 
 
 map <F4> :NERDTreeToggle<Enter>
+
+" vary.vim config
+Plugin 'dongweiming/vary.vim'
+let g:auto_striptrail = "python,ruby,cpp,lua"
+let g:auto_striptab = "python,ruby,cpp,lua"
 

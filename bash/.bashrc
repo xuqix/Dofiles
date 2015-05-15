@@ -147,3 +147,4 @@ export COCOS_ROOT=/Users/xiaok/Documents/cocos2d-x-3.3rc0
 export PATH=/Users/xiaok/software/lua/bin:$PATH
 #export LUA_PATH=/Users/xiaok/work/dco/src:$LUA_PATH
 
+alias irb='irb -r irb/completion'
