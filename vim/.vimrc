@@ -612,6 +612,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuqix/h2cppx'
 Plugin 'Yggdroot/indentLine'
+Plugin 'rking/ag.vim'
 
 " vim-scripts repos
 "Bundle 'FuzzyFinder'
@@ -686,8 +687,40 @@ nmap    tt  y$
 
 map <F4> :NERDTreeToggle<Enter>
 
+if expand("%:e") == "lua"
+   set tabstop=3                                         "设置tab键的宽度
+   set shiftwidth=3                                      "换行时自动缩进3个空格
+elseif expand("%:e") == "rb"
+   set tabstop=2                                         
+   set shiftwidth=2                                      
+elseif expand("%:t") == "Rakefile"
+   set tabstop=2                                         
+   set shiftwidth=2                                      
+endif
+
 " vary.vim config
 Plugin 'dongweiming/vary.vim'
 let g:auto_striptrail = "python,ruby,cpp,lua"
 let g:auto_striptab = "python,ruby,cpp,lua"
+
+Plugin 'gerw/vim-latex-suite'
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+ filetype plugin on
+"
+ " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+ " can be called correctly.
+ set shellslash
+
+ " IMPORTANT: grep will sometimes skip displaying the file name if you
+ " search in a singe file. This will confuse Latex-Suite. Set your grep
+ " program to always generate a file-name.
+ set grepprg=grep\ -nH\ $*
+
+ " OPTIONAL: This enables automatic indentation as you type.
+ filetype indent on
+
+ " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+ " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+ " The following changes the default filetype back to 'tex':
+ let g:tex_flavor='latex'
 
