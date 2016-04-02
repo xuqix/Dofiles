@@ -143,3 +143,11 @@ export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/co
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 #export LUA_PATH=/home/xiaok/extend/work/dco/src/?.lua:$LUA_PATH
+
+export PATH="/usr/include":$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin":$PATH
+
+alias irb='irb -r irb/completion'
+

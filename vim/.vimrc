@@ -1,4 +1,4 @@
-"==============================================================================
+
 "                          << 以下为软件默认配置 >>
 "==============================================================================
 set nocompatible
@@ -485,6 +485,9 @@ elseif expand("%:e") == "c"
 elseif expand("%:e") == "cpp"
     set tags+=~/.vim/c_tags
     set tags+=~/.vim/cpp_tags
+elseif expand("%:e") == "rb"
+    set tabstop=2
+    set shiftwidth=2
 endif
 
 "由于这个插件在编辑.py文件时有问题所以添加如下加载条件
@@ -613,6 +616,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'xuqix/h2cppx'
 Plugin 'Yggdroot/indentLine'
 
+Plugin 'dongweiming/vary.vim'
+let g:auto_striptrail = "python,ruby,cpp,lua"
+let g:auto_striptab = "python,ruby,cpp,lua"
+
+Plugin 'rking/ag.vim'
+
 " vim-scripts repos
 "Bundle 'FuzzyFinder'
 " non-GitHub repos
@@ -623,6 +632,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 "Plugin 'WolfgangMehner/lua-support'
+
 
 call vundle#end()
 
@@ -645,7 +655,8 @@ let g:indentLine_color_gui = '#A4E57E'
 set tags+=~/.vim/cocos_tags
 
 "YCM config!!!
-let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_error_symbol = '✗' "'>>'
 let g:ycm_warning_symbol = '⚠' "'>*'
@@ -682,3 +693,18 @@ let g:lua_complete_omni=1
 
 map <F4> :NERDTreeToggle<Enter>
 
+
+if expand("%:e") == "lua"
+    set tabstop=3                                         "设置tab键的宽度
+    set shiftwidth=3                                      "换行时自动缩进3个空格
+elseif expand("%:e") == "rb"
+    set tabstop=2                                         
+    set shiftwidth=2                                      
+elseif expand("%:t") == "Rakefile"
+    set tabstop=2                                         
+    set shiftwidth=2                                      
+endif
+
+"let g:ag_lhandler="topleft lopen"
+"let g:ag_qhandler="copen 20"
+  
