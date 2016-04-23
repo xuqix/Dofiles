@@ -136,7 +136,7 @@ export LC_CTYPE="en_US.UTF-8"
 export PS1="xiaok:\w\$ "
 
 #set root dir path for cocos2dx
-export COCOS_ROOT=/Users/xiaok/Documents/cocos2d-x-3.3rc0
+#export COCOS_ROOT=/Users/xiaok/Documents/cocos2d-x-3.3rc0
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 # export COCOS_CONSOLE_ROOT=/home/xiaok/extend/game_develop/cocos2d-x-3.2/tools/cocos2d-console/bin
@@ -146,5 +146,10 @@ export COCOS_ROOT=/Users/xiaok/Documents/cocos2d-x-3.3rc0
 #export PATH=/opt/local/bin:$PATH
 export PATH=/Users/xiaok/software/lua/bin:$PATH
 #export LUA_PATH=/Users/xiaok/work/dco/src:$LUA_PATH
+
+export PATH="/usr/include":$PATH
+
+### Added by the Heroku Toolbelt
+#export PATH="/usr/local/heroku/bin":$PATH
 
 alias irb='irb -r irb/completion'

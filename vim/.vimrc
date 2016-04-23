@@ -485,6 +485,9 @@ elseif expand("%:e") == "c"
 elseif expand("%:e") == "cpp"
     set tags+=~/.vim/c_tags
     set tags+=~/.vim/cpp_tags
+elseif expand("%:e") == "rb"
+    set tabstop=2
+    set shiftwidth=2
 endif
 
 "由于这个插件在编辑.py文件时有问题所以添加如下加载条件
@@ -612,6 +615,11 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xuqix/h2cppx'
 Plugin 'Yggdroot/indentLine'
+
+Plugin 'dongweiming/vary.vim'
+let g:auto_striptrail = "python,ruby,cpp,lua"
+let g:auto_striptab = "python,ruby,cpp,lua"
+
 Plugin 'rking/ag.vim'
 
 Plugin 'terryma/vim-multiple-cursors'
@@ -630,6 +638,10 @@ let g:multi_cursor_quit_key='<Esc>'
 " Git repos on your local machine (i.e. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin'
+"Plugin 'WolfgangMehner/lua-support'
+
 
 "for lua
 "Plugin 'xolox/vim-misc'
@@ -673,7 +685,7 @@ let g:ycm_warning_symbol = '⚠' "'>*'
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nmap <F6> :YcmDiags<CR>
+nmap <F5> :YcmDiags<CR>
 "let g:syntastic_ignore_files=[".*\.py$"] "禁用py文件的语法检查
 "let g:ycm_min_num_of_chars_for_completion=3
 
@@ -707,11 +719,6 @@ elseif expand("%:t") == "Rakefile"
    set shiftwidth=2                                      
 endif
 
-" vary.vim config
-Plugin 'dongweiming/vary.vim'
-let g:auto_striptrail = "python,ruby,cpp,lua"
-let g:auto_striptab = "python,ruby,cpp,lua"
-
 Plugin 'gerw/vim-latex-suite'
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
  filetype plugin on
@@ -733,3 +740,13 @@ Plugin 'gerw/vim-latex-suite'
  " The following changes the default filetype back to 'tex':
  let g:tex_flavor='latex'
 
+"for vim-lua-ftplugin
+let g:lua_compiler_name='/usr/bin/luac'
+let g:lua_complete_omni=1
+"let g:lua_internal=0
+"let g:lua_check_syntax=0
+"let g:lua_check_globals=0
+
+"let g:ag_lhandler="topleft lopen"
+"let g:ag_qhandler="copen 20"
+  

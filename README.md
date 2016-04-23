@@ -21,4 +21,15 @@ e.g: 在脚本中添加: create_symlink vim/.vimrc  ~/.vimrc backup
 config_git.sh:
 配置git工具
 
+Usage
+-----
+
+    git clone https://github.com/xuqix/Dofiles.git
+    cd Dofiles
+    git submodule init
+    git submodule update
+
+or you can 
+    
+    git clone --recursive https://github.com/xuqix/Dofiles.git
 
