@@ -701,6 +701,27 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:h2cppx_postfix = '.cpp'
 let g:h2cppx_template= 'template4'
 
+""""""""""""""""""""""""""""""
+" showmarks setting
+""""""""""""""""""""""""""""""
+" Enable ShowMarks
+let showmarks_enable = 1
+" Show which marks
+let showmarks_include ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+" Ignore help, quickfix, non-modifiable buffers
+let showmarks_ignore_type = "hqm"
+" Hilight lower & upper marks
+let showmarks_hlline_lower = 1
+let showmarks_hlline_upper = 1 
+" For showmarks plugin
+hi ShowMarksHLl ctermbg=Yellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
+"hi ShowMarksHLu ctermbg=Magenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black 
+
+""""""""""""""""""""""""""""""
+" markbrowser setting
+""""""""""""""""""""""""""""""
+nmap <silent> <leader>mk :MarksBrowser<cr> 
+
 "一些方便使用的快捷映射
 "映射tt为复制一行(不包括换行符)
 nmap    tt  y$
