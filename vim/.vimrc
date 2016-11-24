@@ -736,8 +736,8 @@ nmap    tt  y$
 map <F4> :NERDTreeToggle<Enter>
 
 if expand("%:e") == "lua"
-   set tabstop=3                                         "设置tab键的宽度
-   set shiftwidth=3                                      "换行时自动缩进3个空格
+   set tabstop=4                                         "设置tab键的宽度
+   set shiftwidth=4                                      "换行时自动缩进4个空格
 elseif expand("%:e") == "rb"
    set tabstop=2                                         
    set shiftwidth=2                                      
@@ -768,7 +768,7 @@ Plugin 'gerw/vim-latex-suite'
  let g:tex_flavor='latex'
 
 "for vim-lua-ftplugin
-let g:lua_compiler_name='/usr/bin/luac'
+let g:lua_compiler_name='/opt/local/bin/luac'
 let g:lua_complete_omni=1
 "let g:lua_internal=0
 "let g:lua_check_syntax=0
